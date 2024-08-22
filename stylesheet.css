@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+    display: flex;
+    flex-direction: row; /* Ensure sidebar and content are in a row layout */
+}
+
+/* Sidebar Styles */
+.sidebar-container {
+    width: 300vh; /* Set the sidebar width (adjust if necessary) */
+    position: sticky; /* Make the sidebar sticky */
+    top: 20px; /* Distance from the top when the sidebar starts sticking */
+    padding: 20px;
+    color: #ecf0f1; /* Light text color */
+    background-color: #2c3e50; /* Dark background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    height: 180vh; /* Adjust height based on content */
+}
+
+/* Ensuring the sidebar image fits properly */
+.sidebar img {
+    border: 5px solid white; /* White border around the image */
+    width: 100%; /* Ensure the image fits the sidebar width */
+    border-radius: 100%; /* Circular image */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Sidebar lists */
+.sidebar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 20px; /* Add padding inside the list */
+    margin: 0; /* Remove default margin */
+}
+
+.sidebar li {
+    font-size: 18px; /* Font size for list items */
+    font-weight: bold; /* Bold font for list items */
+    margin-bottom: 10px; /* Space below each list item */
+}
+
+.sidebar hr.short-hr {
+    border-radius: 50%; /* Round borders for horizontal rule */
+    border: 1px solid #ffffff; /* White border */
+    background-color: #333; /* Dark background color for the rule */
+    width: 80%; /* Width of the horizontal rule */
+    height: 5px; /* Height of the horizontal rule */
+    margin: 10px 0; /* Space above and below the rule */
+}
+
+.sidebar ul ul {
+    padding-left: 15px; /* Add padding for nested lists */
+}
+
+.sidebar ul ul li {
+    font-size: 16px; /* Font size for nested list items */
+    font-weight: normal; /* Normal font weight for nested list items */
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Main Content Styles */
+main {
+    flex: 1; /* Allow main content to take remaining space */
+    margin-left: 30%; /* Offset by the width of the sidebar */
+    padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.Profile-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width for proper alignment */
+    margin-bottom: 40px; /* Space below profile section */
+    padding: 50px; /* Padding for better spacing */
+}
+
+.Profile-name h1 {
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 10px; /* Space between letters */
+    padding: 20px;
+    font-size: 36px; /* Font size for main heading */
+    margin-bottom: 5px; /* Space below the heading */
+}
+
+.Profile-name h2 {
+    padding: 20px;
+    font-size: 24px; /* Font size for subheading */
+    font-weight: normal; /* Normal font weight */
+    color: #7f8c8d; /* Gray color for subheading */
+    margin-bottom: 20px; /* Space below the subheading */
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f1; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the info container */
+}
+
+.Profile-info p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+}
+
+hr.main-content-hr {
+    border: 0;
+    border-top: 2px solid #bdc3c7; /* Gray border for horizontal rule */
+    margin: 30px 0; /* Space above and below the rule */
+}
+
+/* About Me Section */
+.about-me h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px; /* Font size for section headings */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.about-me p {
+    justify-content: center;
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    margin-left: 20px; /* Space to the left of the paragraph */
+}
+
+/* Experience Section */
+.Experience h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px; /* Font size for section headings */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.Experience p {
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+    margin-left: 20px; /* Space to the left of the paragraph */
+}
+
+/* Reference Section */
+.Reference h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px; /* Font size for section headings */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.Reference ul {
+    list-style-type: disc; /* Disc style for list items */
+    margin-left: 20px; /* Space to the left of the list */
+}
+
+.Reference li {
+    font-size: 16px; /* Font size for list items */
+    line-height: 1.6; /* Line height for readability */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar and content vertically on small screens */
+    }
+
+    .sidebar-container {
+        width: 100%; /* Full width for smaller screens */
+        position: relative; /* Reset positioning for responsiveness */
+        top: 0; /* Reset top value */
+        box-shadow: none; /* Remove box shadow on small screens */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin on smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .sidebar img {
+        margin: 0 auto; /* Center image horizontally */
+        display: block; /* Ensure image is displayed as a block element */
+    }
+}
